@@ -19,5 +19,14 @@ function setup_apache() {
 }
 
 
+#Cleanup
+function cleanup() {
+  echo "Cleaning up"
+  apt-get auto-remove -y
+  apt-get clean
+  rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+}
+
 setup
 setup_apache
+cleanup
