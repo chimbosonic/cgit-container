@@ -1,5 +1,5 @@
 # CGIT Container
-[![pipeline status](https://gitlab.com/chimbosonic/cgit-container/badges/master/pipeline.svg)]
+![pipeline status](https://gitlab.com/chimbosonic/cgit-container/badges/master/pipeline.svg)
 
 This is a cgit container compiled from https://git.zx2c4.com/cgit/.
 
