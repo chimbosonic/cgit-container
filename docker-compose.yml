@@ -1,0 +1,10 @@
+version: '3'
+services:
+  cgit:
+    container_name: cgit
+    image: chimbosonic/cgit:latest
+    volumes:
+     - "/home/git:/mnt/git:ro"
+    ports:
+     - "80:80/tcp"
+    restart: always
