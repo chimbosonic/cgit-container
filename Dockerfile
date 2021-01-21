@@ -49,4 +49,4 @@ HEALTHCHECK --interval=5s --timeout=3s --start-period=5s CMD curl --fail -I -L '
 ENTRYPOINT ["/usr/bin/supervisord"]
 
 CMD ["-c", "/etc/supervisord.conf"]
-expose 80
+EXPOSE 80
