@@ -24,9 +24,9 @@ FROM ubuntu:latest
 LABEL maintainer="alexis.lowe@protonmail.com"
 LABEL org.label-schema.schema-version="1.0"
 LABEL org.label-schema.build-date=$BUILD_DATE
-LABEL org.label-schema.name="chimbosonic/dump1090"
-LABEL org.label-schema.description="dump1090 container"
-LABEL org.label-schema.vcs-url="https://gitlab.com/chimbosonic/dump1090-container"
+LABEL org.label-schema.name="chimbosonic/cgit"
+LABEL org.label-schema.description="cgit container"
+LABEL org.label-schema.vcs-url="https://gitlab.com/chimbosonic/cgit-container"
 LABEL org.label-schema.vcs-ref=$VCS_REF
 
 ENV DEBIAN_FRONTEND noninteractive
@@ -49,3 +49,4 @@ HEALTHCHECK --interval=5s --timeout=3s --start-period=5s CMD curl --fail -I -L '
 ENTRYPOINT ["/usr/bin/supervisord"]
 
 CMD ["-c", "/etc/supervisord.conf"]
+expose 80
