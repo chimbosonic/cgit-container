@@ -9,6 +9,8 @@ Base image is ubuntu:latest and uses apache2 to run the server.
 
 The image is available on Docker Hub [here](https://hub.docker.com/repository/docker/chimbosonic/cgit)
 
+Source code and pipeline can be found [here](https://github.com/chimbosonic/cgit-container)
+
 ## Image Verification
 The image is signed using [cosign](https://github.com/sigstore/cosign) from sigstore.
 

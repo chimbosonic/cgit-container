@@ -45,10 +45,10 @@ test-signing-blob:
 	mkdir -p /tmp/$(PROJECT)/
 	vault kv get -field=key secrets/$(PROJECT)/cosign > /tmp/$(PROJECT)/cosign.key
 	@COSIGN_PASSWORD=$(shell vault kv get -field=password secrets/$(PROJECT)/cosign) cosign sign-blob --key /tmp/$(PROJECT)/cosign.key ./README.md
-	rm /tmp/$(PROJECT)/cosign.key
+	rm -rf /tmp/$(PROJECT)
 
 test-signing-image: 
 	mkdir -p /tmp/$(PROJECT)/
 	vault kv get -field=key secrets/$(PROJECT)/cosign > /tmp/$(PROJECT)/cosign.key
 	@COSIGN_PASSWORD=$(shell vault kv get -field=password secrets/$(PROJECT)/cosign) cosign sign --key /tmp/$(PROJECT)/cosign.key chimbosonic/cgit:latest
-	rm /tmp/$(PROJECT)/cosign.key
+	rm -rf /tmp/$(PROJECT)
