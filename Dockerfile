@@ -1,10 +1,5 @@
 FROM ubuntu:latest as builder
 
-ARG BUILD_DATE
-ARG VCS_REF
-LABEL org.label-schema.build-date=$BUILD_DATE
-LABEL org.label-schema.vcs-ref=$VCS_REF
-
 ENV DEBIAN_FRONTEND noninteractive
 ENV LC_ALL C.UTF-8
 ENV LANG C.UTF-8
@@ -20,14 +15,6 @@ RUN chmod +x ./setup_build.sh && ./setup_build.sh
 RUN chmod +x ./build.sh && ./build.sh
 
 FROM ubuntu:latest
-
-LABEL maintainer="alexis.lowe@protonmail.com"
-LABEL org.label-schema.schema-version="1.0"
-LABEL org.label-schema.build-date=$BUILD_DATE
-LABEL org.label-schema.name="chimbosonic/cgit"
-LABEL org.label-schema.description="cgit container"
-LABEL org.label-schema.vcs-url="https://gitlab.com/chimbosonic/cgit-container"
-LABEL org.label-schema.vcs-ref=$VCS_REF
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV LC_ALL C.UTF-8
