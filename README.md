@@ -1,13 +1,21 @@
-# CGIT Container
-![pipeline status](https://gitlab.com/chimbosonic/cgit-container/badges/master/pipeline.svg)
+# CGIT OCI image
+![pipeline status](https://github.com/chimbosonic/cgit-container/actions/workflows/main.yml/badge.svg?branch=main)
 
-This is a cgit container compiled from https://git.zx2c4.com/cgit/.
+This is a cgit OCI image built from https://git.zx2c4.com/cgit/.
 
 Inspired by https://github.com/oemunoz/cgit.
 
 Base image is ubuntu:latest and uses apache2 to run the server.
 
 The image is available on Docker Hub [here](https://hub.docker.com/repository/docker/chimbosonic/cgit)
+
+## Image Verification
+The image is signed using [cosign](https://github.com/sigstore/cosign) from sigstore.
+
+You can verify the signature with:
+```bash
+cosign verify --key cosign.pub chimbosonic/cgit:latest
+```
 
 ## Running it
 ### plain docker
@@ -30,3 +38,5 @@ This will build the container.
 ```bash
 make build
 ```
+## Misc
+Image used to be stored and built at https://gitlab.com/chimbosonic/cgit-container that repo is now deprecated.
