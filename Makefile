@@ -9,7 +9,6 @@ current_dir = $(shell pwd)
 BUILD_DATE      := $(shell date -u +'%Y-%m-%dT%H:%M:%SZ')
 VCS_REF         := $(shell git rev-parse --short HEAD)
 
-
 .PHONY: build force-build run push
 
 ARGS= -t $(IMG) --build-arg BUILD_DATE=$(BUILD_DATE) --build-arg VCS_REF=$(VCS_REF) .
@@ -40,3 +39,10 @@ test-setup:
 
 clean:
 	rm -rf test_repo
+
+
+test-signing: 
+	mkdir -p /tmp/$(PROJECT)/
+	vault kv get -field=key secrets/$(PROJECT)/cosign > /tmp/$(PROJECT)/cosign.key
+	@COSIGN_PASSWORD=$(shell vault kv get -field=password secrets/$(PROJECT)/cosign) cosign sign-blob --key /tmp/$(PROJECT)/cosign.key ./README.md
+	rm /tmp/$(PROJECT)/cosign.key
