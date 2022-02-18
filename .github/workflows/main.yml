@@ -44,9 +44,9 @@ jobs:
           labels: |
             org.opencontainers.image.title=cgit
             org.opencontainers.image.description=A hyperfast web frontend for git repositories written in C.
-            org.opencontainers.image.authors="Alexis Lowe <alexis.lowe@protonmail.com>"
-            org.opencontainers.image.documentation="https://github.com/chimbosonic/cgit-container/blob/main/README.md"
-            org.opencontainers.image.url="https://hub.docker.com/r/chimbosonic/cgit"
+            org.opencontainers.image.authors=Alexis Lowe <alexis.lowe@protonmail.com>
+            org.opencontainers.image.documentation=https://github.com/chimbosonic/cgit-container/blob/main/README.md
+            org.opencontainers.image.url=https://hub.docker.com/r/chimbosonic/cgit
           
       - name: Build and Push container images
         uses: docker/build-push-action@v2
