@@ -35,7 +35,7 @@ test: test-setup run
 
 test-setup:
 	mkdir -p test_repo
-	cd test_repo && git clone -q --mirror git@gitlab.com:chimbosonic/distiller.git
+	cd test_repo && git clone -q --mirror git@github.com:chimbosonic/distiller.git
 
 clean:
 	rm -rf test_repo
