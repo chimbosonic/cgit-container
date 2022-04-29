@@ -5,7 +5,7 @@ This is a cgit OCI image built from https://git.zx2c4.com/cgit/.
 
 Inspired by https://github.com/oemunoz/cgit.
 
-Base image is ubuntu:latest and uses apache2 to run the server.
+Base image is ubuntu:focal and uses apache2 to run the server.
 
 The image is available on Docker Hub [here](https://hub.docker.com/repository/docker/chimbosonic/cgit)
 
@@ -24,7 +24,7 @@ cosign verify --key cosign.pub chimbosonic/cgit:latest
 Feel free to change the port and folder that contains your repos.
 
 ```bash
-docker run -it  --rm -p 80:80 -v /home/git:/mnt/git --name cgit -t chimbosonic/cgit:latest
+docker run -it  --rm -p 80:80 -v /home/git:/mnt/git --name cgit chimbosonic/cgit:latest
 ```
 
 ### docker-compose

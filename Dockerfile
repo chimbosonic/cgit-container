@@ -1,4 +1,4 @@
-FROM ubuntu:latest as builder
+FROM ubuntu:focal as builder
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV LC_ALL C.UTF-8
@@ -14,7 +14,7 @@ RUN chmod +x ./setup_build.sh && ./setup_build.sh
 
 RUN chmod +x ./build.sh && ./build.sh
 
-FROM ubuntu:latest
+FROM ubuntu:focal
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV LC_ALL C.UTF-8
