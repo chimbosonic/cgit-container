@@ -6,7 +6,7 @@ function setup() {
   echo "Installing run dependencies"
   echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections
   apt-get update
-  apt-get install -y supervisor highlight python-markdown apache2 lua-luaossl curl
+  apt-get install -y supervisor highlight python3-markdown apache2 lua-luaossl curl
 }
 
 

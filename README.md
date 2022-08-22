@@ -5,7 +5,7 @@ This is a cgit OCI image built from https://git.zx2c4.com/cgit/.
 
 Inspired by https://github.com/oemunoz/cgit.
 
-Base image is ubuntu:focal and uses apache2 to run the server.
+Base image is ubuntu:jammy and uses apache2 to run the server.
 
 The image is available on Docker Hub [here](https://hub.docker.com/repository/docker/chimbosonic/cgit)
 
