@@ -1,5 +1,5 @@
-# CGIT OCI image
 ![pipeline status](https://github.com/chimbosonic/cgit-container/actions/workflows/main.yml/badge.svg?branch=main)
+# CGIT OCI image
 
 This is a cgit OCI image built from https://git.zx2c4.com/cgit/.
 
@@ -7,7 +7,9 @@ Inspired by https://github.com/oemunoz/cgit.
 
 Base image is ubuntu:jammy and uses apache2 to run the server.
 
-The image is available on Docker Hub [here](https://hub.docker.com/repository/docker/chimbosonic/cgit)
+The image can be pulled from the following repositories:
+- Docker Hub [here](https://hub.docker.com/repository/docker/chimbosonic/cgit)
+- Quay.io [here](https://quay.io/repository/chimbosonic/cgit)
 
 Source code and pipeline can be found [here](https://github.com/chimbosonic/cgit-container)
 
@@ -40,5 +42,6 @@ This will build the container.
 ```bash
 make build
 ```
+
 ## Misc
 Image used to be stored and built at https://gitlab.com/chimbosonic/cgit-container that repo is now deprecated.
